@@ -11,7 +11,75 @@
     <title>Hallowindie</title>
   </head>
   <body>
-    <h1>Hallowindie</h1>
+    <div class="col-auto">
+      <h1 id="suma_pedido" style="color: red">Suma del pedido = </h1>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="card" onclick="sumar(4);">
+          <div class="card-body">
+            <img src="/images/cervezas_alhambra.png" class="card-img-top" alt="">
+            <div class="card-body">
+              <!-- <h5 class="card-title">Cerveza Alhambra</h5> -->
+              <!-- <a href="#" class="btn btn-success" onclick="sumar(4);">Pedir</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="card" onclick="sumar(3);">
+          <div class="card-body">
+            <img src="/images/radler_logo.png" class="card-img-top" alt="">
+            <div class="card-body">
+              <!-- <h5 class="card-title">Cerveza Alhambra</h5> -->
+              <!-- <a href="#" class="btn btn-success" onclick="sumar(3);">Pedir</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="card" onclick="sumar(3);">
+          <div class="card-body">
+            <img src="/images/caña.png" class="card-img-top" alt="">
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="card">
+          <div class="card-body">
+            <img src="/images/radler_logo.png" class="card-img-top" alt="">
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="card">
+          <div class="card-body">
+            <img src="/images/radler_logo.png" class="card-img-top" alt="">
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="card">
+          <div class="card-body">
+            <img src="/images/radler_logo.png" class="card-img-top" alt="">
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <button class="btn btn-danger" onclick="reset();">Nuevo pedido</button>
+    </div>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -25,3 +93,35 @@
     -->
   </body>
 </html>
+
+<script>
+  var vaso = 1;
+  //var alhambra = 4;
+  var caña = 3;
+  var radler = 3;
+  var cañon = 5;
+  var refrescos = 3;
+  var agua = 2;
+  var copa = 7;
+  var copa_premium = 8;
+  var monster = 4;
+  var cerveza_tostada = 3;
+  var zumo = 2;
+  var vermouth = 2;
+  var calimocho = 3;
+
+  var suma = 0;
+
+
+  function sumar(valor) {
+    suma = suma + valor;
+    // alert("Suma = "+ suma);
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  }
+
+  function reset() {
+    suma = 0;
+    suma_pedido.innerText = "Suma del pedido = ";
+  }
+
+</script>
