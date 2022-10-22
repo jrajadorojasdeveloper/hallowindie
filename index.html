@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,66 +15,63 @@
     <div class="col-auto">
       <h1 id="suma_pedido" style="color: red">Suma del pedido = </h1>
     </div>
-
-    <div class="row">
-      <div class="col-sm-2">
-        <div class="card" onclick="sumar(4);">
-          <div class="card-body">
-            <img src="./assets/images/cervezas_alhambra.png" class="card-img-top" alt="">
-            <div class="card-body">
-              <!-- <h5 class="card-title">Cerveza Alhambra</h5> -->
-              <!-- <a href="#" class="btn btn-success" onclick="sumar(4);">Pedir</a> -->
-            </div>
-          </div>
-        </div>
+    <div class="col-auto">
+      <h2 class="mt-4">Listado de pedidos</h2>
+    </div>
+    <div class="container">
+    <!-- <p>By using the <code>.row-cols-* classes, you can easily create a grid with equal columns.</p> -->
+    <div class="row row-cols-md-3 mb-3 mt-4">
+      <div class="col themed-grid-col text-uppercase border border-dark"  onclick="sumar(4);">
+        <h3 style="text-align: center;color: black;">Cerverza Alhambra</h3>
       </div>
-      <div class="col-sm-2">
-        <div class="card" onclick="sumar(3);">
-          <div class="card-body">
-            <img src="./assets/images/radler_logo.png" class="card-img-top" alt="">
-            <div class="card-body">
-              <!-- <h5 class="card-title">Cerveza Alhambra</h5> -->
-              <!-- <a href="#" class="btn btn-success" onclick="sumar(3);">Pedir</a> -->
-            </div>
-          </div>
-        </div>
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
+        <h3 style="text-align: center;color: black;">Radler</h3>
       </div>
-      <div class="col-sm-2">
-        <div class="card" onclick="sumar(3);">
-          <div class="card-body">
-            <img src="./assets/images/caña.png" class="card-img-top" alt="">
-            <div class="card-body">
-            </div>
-          </div>
-        </div>
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
+        <h3 style="text-align: center;color: black;">Caña</h3>
       </div>
-      <div class="col-sm-2">
-        <div class="card">
-          <div class="card-body">
-            <img src="./assets/images/radler_logo.png" class="card-img-top" alt="">
-            <div class="card-body">
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="row row-cols-md-3 mb-3">
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(5);">
+        <h3 style="text-align: center;color: black;">Cañón</h3>
       </div>
-      <div class="col-sm-2">
-        <div class="card">
-          <div class="card-body">
-            <img src="./assets/images/radler_logo.png" class="card-img-top" alt="">
-            <div class="card-body">
-            </div>
-          </div>
-        </div>
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
+        <h3 style="text-align: center;color: black;">Refresco</h3>
       </div>
-      <div class="col-sm-2">
-        <div class="card">
-          <div class="card-body">
-            <img src="./assets/images/radler_logo.png" class="card-img-top" alt="">
-            <div class="card-body">
-            </div>
-          </div>
-        </div>
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(2);">
+        <h3 style="text-align: center;color: black;">Agua</h3>
       </div>
+    </div>
+    <div class="row row-cols-md-3 mb-3">
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(7);">
+        <h3 style="text-align: center;color: black;">Copa</h3>
+      </div>
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(8);">
+        <h3 style="text-align: center;color: black;">Copa Premium</h3>
+      </div>
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(4);">
+        <h3 style="text-align: center;color: black;">Monster</h3>
+      </div>
+    </div>
+    <div class="row row-cols-md-3 mb-3">
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
+        <h3 style="text-align: center;color: black;">0'0 Tostada</h3>
+      </div>
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(2);">
+        <h3 style="text-align: center;color: black;">Zumo</h3>
+      </div>
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
+        <h3 style="text-align: center;color: black;">Vermouth</h3>
+      </div>
+    </div>
+    <div class="row row-cols-md-3 mb-3">
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(4);">
+        <h3 style="text-align: center;color: black;">Calimocho</h3>
+      </div>
+      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(1);">
+        <h3 style="text-align: center;color: black;">Vaso</h3>
+      </div>
+      <!-- <div class="col themed-grid-col"><code><h3>Vermouth</h3></div> -->
     </div>
 
     <div>
