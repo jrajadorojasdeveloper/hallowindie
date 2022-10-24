@@ -16,59 +16,63 @@
       <h1 id="suma_pedido" style="color: red">Suma del pedido = </h1>
     </div>
     <div class="col-auto">
-      <h2 class="mt-4">Listado de pedidos</h2>
+      <h2 class="mt-4" style="color: black">Listado de pedidos:</h2>
     </div>
+    <div class="container">
+      <div id="elementos"></div>
+    </div>
+    
     <div class="container">
     <!-- <p>By using the <code>.row-cols-* classes, you can easily create a grid with equal columns.</p> -->
     <div class="row row-cols-md-3 mb-3 mt-4">
-      <div class="col themed-grid-col text-uppercase border border-dark"  onclick="sumar(4);">
+      <div id="crear_alhambra" class="col themed-grid-col text-uppercase border border-dark"  onclick="sumar(4);">
         <h3 style="text-align: center;color: black;">Cerverza Alhambra</h3>
       </div>
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
+      <div id="crear_radler" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
         <h3 style="text-align: center;color: black;">Radler</h3>
       </div>
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
+      <div id="crear_cania" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
         <h3 style="text-align: center;color: black;">Caña</h3>
       </div>
     </div>
     <div class="row row-cols-md-3 mb-3">
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(5);">
+      <div id="crear_canion" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(5);">
         <h3 style="text-align: center;color: black;">Cañón</h3>
       </div>
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
+      <div id="crear_refresco" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
         <h3 style="text-align: center;color: black;">Refresco</h3>
       </div>
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(2);">
+      <div id="crear_agua" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(2);">
         <h3 style="text-align: center;color: black;">Agua</h3>
       </div>
     </div>
     <div class="row row-cols-md-3 mb-3">
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(7);">
+      <div id="crear_copa" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(7);">
         <h3 style="text-align: center;color: black;">Copa</h3>
       </div>
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(8);">
+      <div id="crear_copa_premium" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(8);">
         <h3 style="text-align: center;color: black;">Copa Premium</h3>
       </div>
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(4);">
+      <div id="crear_monster" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(4);">
         <h3 style="text-align: center;color: black;">Monster</h3>
       </div>
     </div>
     <div class="row row-cols-md-3 mb-3">
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
+      <div id="crear_cerv_tostada" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
         <h3 style="text-align: center;color: black;">0'0 Tostada</h3>
       </div>
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(2);">
+      <div id="crear_zumo" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(2);">
         <h3 style="text-align: center;color: black;">Zumo</h3>
       </div>
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
+      <div id="crear_vermount" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(3);">
         <h3 style="text-align: center;color: black;">Vermouth</h3>
       </div>
     </div>
     <div class="row row-cols-md-3 mb-3">
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(4);">
+      <div id="crear_calimocho" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(4);">
         <h3 style="text-align: center;color: black;">Calimocho</h3>
       </div>
-      <div class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(1);">
+      <div id="crear_vaso" class="col themed-grid-col text-uppercase border border-dark" onclick="sumar(1);">
         <h3 style="text-align: center;color: black;">Vaso</h3>
       </div>
       <!-- <div class="col themed-grid-col"><code><h3>Vermouth</h3></div> -->
@@ -83,7 +87,7 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -120,6 +124,240 @@
   function reset() {
     suma = 0;
     suma_pedido.innerText = "Suma del pedido = ";
+    location.reload();
   }
+
+  jQuery(document).ready(function() {
+  
+  // CREAR
+  $('#crear_alhambra').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Cerveza Alhamra 4€ <button type="button" class="remover_alhambra btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_radler').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Radler 3€ <button type="button" class="remover_radler btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_cania').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Caña 3€ <button type="button" class="remover_cania btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_canion').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Cañón 5€ <button type="button" class="remover_canion btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_refresco').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Refresco 3€ <button type="button" class="remover_refresco btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_agua').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Agua 2€ <button type="button" class="remover_agua btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_copa').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Copa 7€ <button type="button" class="remover_copa btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_copa_premium').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Copa Premium 8€ <button type="button" class="remover_copa_premium btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_monster').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Monster 4€ <button type="button" class="remover_monster btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_cerv_tostada').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Cerveza 0% tostada 3€ <button type="button" class="remover_cerv_tostada btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_zumo').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Zumo 2€ <button type="button" class="remover_zumo btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_vermouth').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Vermouth 3€ <button type="button" class="remover_vermouth btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_calimocho').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Calimocho 4€ <button type="button" class="remover_calimocho btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  $('#crear_vaso').on('click', function() {
+    $('#elementos').append('<div class="form-row row row-cols-md-3"> \
+        <div class="col-12 themed-grid-col"> \
+          <h2>* Vaso 1€ <button type="button" class="remover_vaso btn btn-outline-danger">Eliminar</button></h2> \
+        </div> \
+        <div> \
+        </div> \
+      </div>');
+  });
+
+  // $('#crear_radler').on('click', function() {
+  //   $('#elementos').append('<div class="form-row" style="margin:2px;"><div class="col"><input type="text" class="form-control"></div><div class="col"><input type="text" class="form-control"></div><div class="col"><button class="remover btn btn-danger">Remover</button></div></div>');
+  // });
+  
+  //ELIMINAR
+  $(document).on('click', '.remover_alhambra', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 4;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_radler', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 3;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_cania', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 3;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_canion', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 5;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_refresco', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 3;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_agua', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 2;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_copa', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 7;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_copa_premium', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 8;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_monster', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 4;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_cerv_tostada', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 3;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_zumo', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 2;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_vermouth', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 3;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_calimocho', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 4;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+
+  $(document).on('click', '.remover_vaso', function(){
+    $(this).parents('.form-row').remove();
+    suma = suma - 1;
+    suma_pedido.innerText = "Suma del pedido = " + suma + " €";
+  })
+});
 
 </script>
