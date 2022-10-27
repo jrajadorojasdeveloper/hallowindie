@@ -111,8 +111,6 @@
         </div>
       </div>
 
-
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -162,6 +160,14 @@
     var efectivo_entregado = document.getElementById('entregado').value;
     if (efectivo_entregado < suma || suma == 0) {
       alert("No se puede realizar la operación.");
+      var modalContainer = document.getElementById('staticBackdrop')
+      var myModal = new bootstrap.Modal(modalContainer, { backdrop: 'static' })
+      
+      modalContainer.querySelector("#staticBackdropLabel").innerHTML = "¡¡¡ERROR!!!";
+      modalContainer.querySelector(".cambio").innerHTML = "¡¡¡El importe entregado es mejor que la suma del pedido!!!";
+      modalContainer.querySelector(".btn-danger").style.visibility = "hidden"; 
+      
+      myModal.show();
     } else {
       var cambio = efectivo_entregado - suma;
     
