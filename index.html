@@ -159,7 +159,6 @@
   function cambio() {
     var efectivo_entregado = document.getElementById('entregado').value;
     if (efectivo_entregado < suma || suma == 0) {
-      alert("No se puede realizar la operación.");
       var modalContainer = document.getElementById('staticBackdrop')
       var myModal = new bootstrap.Modal(modalContainer, { backdrop: 'static' })
       
